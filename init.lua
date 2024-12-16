@@ -118,6 +118,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Detect Dockerfile with custom naming yet standard conventions
+vim.cmd [[ augroup DockerfileDetection autocmd! autocmd BufRead,BufNewFile Dockerfile.* set filetype=dockerfile augroup END ]]
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -679,6 +682,13 @@ require('lazy').setup({
               environment = { includePaths = { './vendor/**' } },
               format = { enable = true },
               diagnostics = { enable = true },
+            },
+          },
+        },
+        dockerls = {
+          settings = {
+            dockerfile = {
+              fileExtensions = { 'dockerfile' },
             },
           },
         },
