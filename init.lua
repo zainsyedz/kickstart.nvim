@@ -901,6 +901,16 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+      vim.cmd.hi 'Comment gui=none'
+      vim.cmd.hi 'Comment gui=none'
+      vim.cmd.hi 'NonText ctermbg=none guibg=NONE'
+      vim.cmd.hi 'Normal guibg=NONE ctermbg=NONE'
+      vim.cmd.hi 'NormalNC guibg=NONE ctermbg=NONE'
+      vim.cmd.hi 'SignColumn ctermbg=NONE ctermfg=NONE guibg=NONE'
+      vim.cmd.hi 'Pmenu ctermbg=NONE ctermfg=NONE guibg=NONE'
+      vim.cmd.hi 'FloatBorder ctermbg=NONE ctermfg=NONE guibg=NONE'
+      vim.cmd.hi 'NormalFloat ctermbg=NONE ctermfg=NONE guibg=NONE'
+      vim.cmd.hi 'TabLine ctermbg=None ctermfg=None guibg=None'
     end,
   },
 
