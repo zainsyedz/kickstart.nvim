@@ -29,6 +29,7 @@ return {
         'json',
         'ldap',
         'libxml',
+        'memcache',
         'mbstring',
         'mcrypt',
         'meta',
