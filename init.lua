@@ -18,6 +18,18 @@ vim.opt.number = true
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
 
+-- Use spaces instead of tabs
+vim.opt.expandtab = true
+
+-- Set the number of spaces per tab
+vim.opt.tabstop = 4
+
+-- Set the number of spaces for autoindent
+vim.opt.shiftwidth = 4
+
+-- Ensure that the backspace works as expected
+vim.opt.softtabstop = 4
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 

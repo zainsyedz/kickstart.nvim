@@ -2,6 +2,7 @@ return {
   settings = {
     intelephense = {
       stubs = {
+        'memcache',
         'mongodb',
         'amqp',
         'redis',
