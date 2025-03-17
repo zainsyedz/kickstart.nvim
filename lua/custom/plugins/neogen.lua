@@ -5,7 +5,7 @@ return {
       enabled = true,
       input_after_comment = true,
     }
-    vim.keymap.set('n', '<leader>gs', ':Neogen', { desc = '[G]enereate [S]nippet' })
+    vim.keymap.set('n', '<leader>gs', ':Neogen<CR>', { desc = '[G]enereate [S]nippet' })
   end,
   version = '*',
 }

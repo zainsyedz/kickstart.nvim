@@ -20,6 +20,7 @@ return {
         'fileinfo',
         'filter',
         'ftp',
+        'fpm',
         'gd',
         'gettext',
         'gmp',
