@@ -133,16 +133,16 @@ return {
     -- end
 
     dap.listeners.after.event_initialized['dapui_config'] = dapui.open
-    dap.listeners.before.event_terminated['dapui_config'] = dapui.close
-    dap.listeners.before.event_exited['dapui_config'] = dapui.close
+    -- dap.listeners.before.event_terminated['dapui_config'] = dapui.close
+    -- dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- PHP Configuration
     local path = require('mason-registry').get_package('php-debug-adapter'):get_install_path()
-    dap.adapters.php = {
-      type = 'executable',
-      command = 'node',
-      args = { path .. '/extension/out/phpDebug.js' },
-    }
+    -- dap.adapters.php = {
+    --   type = 'executable',
+    --   command = 'node',
+    --   args = { path .. '/extension/out/phpDebug.js' },
+    -- }
     dap.configurations.php = {
       {
         type = 'php',
