@@ -22,7 +22,7 @@ return {
     'jay-babu/mason-nvim-dap.nvim',
 
     -- Add your own debuggers here
-    'leoluz/nvim-dap-go',
+    -- 'leoluz/nvim-dap-go',
   },
   keys = {
     -- Basic debugging keymaps, feel free to change to your liking!
@@ -136,12 +136,28 @@ return {
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
-    -- Install golang specific config
-    require('dap-go').setup {
-      delve = {
-        -- On Windows delve must be run attached or it crashes.
-        -- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
-        detached = vim.fn.has 'win32' == 0,
+    -- PHP Configuration
+    local path = require('mason-registry').get_package('php-debug-adapter'):get_install_path()
+    dap.adapters.php = {
+      type = 'executable',
+      command = 'node',
+      args = { path .. '/extension/out/phpDebug.js' },
+    }
+    dap.configurations.php = {
+      {
+        type = 'php',
+        request = 'launch',
+        name = 'Listen for Xdebug',
+        port = 9003,
+      },
+      {
+        name = 'Run current script',
+        type = 'php',
+        request = 'launch',
+        port = 9003,
+        cwd = '${fileDirname}',
+        program = '${file}',
+        runtimeExecutable = 'php',
       },
     }
   end,
