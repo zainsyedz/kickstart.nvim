@@ -187,6 +187,7 @@ return {
       lua_ls = require 'lspconfig.lua_ls',
       intelephense = vim.tbl_deep_extend('force', require 'lspconfig.intelephense', load_project_specific_settings 'intelephense'),
       -- intelephense = require 'lspconfig.intelephense',
+      helm_ls = require 'lspconfig.helm',
       dockerls = require 'lspconfig.dockerls',
     }
 
