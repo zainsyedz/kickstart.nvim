@@ -6,6 +6,10 @@ return {
     -- add any opts here
     -- for example
     provider = 'copilot',
+    cursor_applying_provider = 'copilot',
+    behaviour = {
+      enable_cursor_planning_mode = true,
+    },
     -- openai = {
     --   endpoint = 'https://api.openai.com/v1',
     --   model = 'gpt-4o', -- your desired model (or use gpt-4o, etc.)
