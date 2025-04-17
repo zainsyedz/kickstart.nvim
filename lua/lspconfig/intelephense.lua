@@ -79,6 +79,9 @@ return {
         'zip',
         'zlib',
       },
+      compatibility = {
+        preferPsalmPhpstanPrefixedAnnotations = true,
+      },
       environment = { includePaths = { './vendor/**' } },
       format = { enable = true },
       diagnostics = { enable = true },
