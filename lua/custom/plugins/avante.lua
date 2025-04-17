@@ -15,6 +15,11 @@ return {
     --   --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
     -- },
   },
+  rag_service = {
+    enabled = true,
+    host_mount = vim.fn.getcwd(),
+    provider = 'copilot',
+  },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = 'make',
   -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
