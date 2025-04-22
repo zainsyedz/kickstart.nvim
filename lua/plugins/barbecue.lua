@@ -7,6 +7,7 @@ return {
     'nvim-tree/nvim-web-devicons', -- optional dependency
   },
   opts = {
+    theme = 'tokyonight',
     -- configurations go here
   },
 }
