@@ -5,3 +5,7 @@ nvim
 
 spell/
 lazy-lock.json
+
+#workspace or session files
+/*session*
+/*workspace*

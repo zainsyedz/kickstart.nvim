@@ -20,7 +20,14 @@ return { -- Collection of various small independent plugins/modules
     require('mini.pairs').setup()
 
     -- Add sessions
-    require('mini.sessions').setup()
+    require('mini.sessions').setup {
+      directory = '',
+      file = '.session.vim',
+    }
+    -- Define key mappings for sessions
+    vim.api.nvim_set_keymap('n', '<leader>ww', '<cmd>lua MiniSessions.write(".session.vim")<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>wl', '<cmd>lua MiniSessions.read()<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>wd', '<cmd>lua MiniSessions.delete()<CR>', { noremap = true, silent = true })
 
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,
