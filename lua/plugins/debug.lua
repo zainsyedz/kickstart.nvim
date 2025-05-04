@@ -149,6 +149,10 @@ return {
         request = 'launch',
         name = 'Listen for Xdebug',
         port = 9003,
+        server = false,
+        pathMappings = {
+          ['/var/www/html'] = '${workspaceFolder}',
+        },
       },
       {
         name = 'Run current script',
