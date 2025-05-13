@@ -207,6 +207,13 @@ return {
       }
     end,
   },
+  {
+    'ray-x/lsp_signature.nvim',
+    event = 'InsertEnter',
+    opts = {
+      -- cfg options
+    },
+  },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
