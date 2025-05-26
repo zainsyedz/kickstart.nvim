@@ -82,7 +82,10 @@ return {
       compatibility = {
         preferPsalmPhpstanPrefixedAnnotations = true,
       },
-      environment = { includePaths = { './vendor/**' } },
+      environment = {
+        includePaths = { './vendor/**' },
+        phpVersion = '8.4.0',
+      },
       format = { enable = true },
       diagnostics = { enable = true },
     },
