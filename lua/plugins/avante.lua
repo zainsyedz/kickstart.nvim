@@ -6,23 +6,37 @@ return {
     -- add any opts here
     -- for example
     provider = 'copilot',
-    cursor_applying_provider = 'copilot',
-    behaviour = {
-      enable_cursor_planning_mode = true,
+    auto_suggestions_provider = 'copilot',
+    providers = {
+      copilot = {
+        model = 'claude-sonnet-4',
+      },
     },
-    -- openai = {
-    --   endpoint = 'https://api.openai.com/v1',
-    --   model = 'gpt-4o', -- your desired model (or use gpt-4o, etc.)
-    --   timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
-    --   temperature = 0,
-    --   max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
-    --   --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
-    -- },
   },
-  rag_service = {
-    enabled = true,
-    host_mount = vim.fn.getcwd(),
-    provider = 'copilot',
+
+  -- rag_service = {
+  --   enabled = true,
+  --   host_mount = vim.fn.getcwd(), -- dynamically scopes to active project
+  --   runner = 'docker',
+  --   llm = {
+  --     provider = 'github-copilot',
+  --     model = 'claude-sonnet-4',
+  --     endpoint = nil,
+  --     api_key = nil,
+  --     extra = nil,
+  --   },
+  --   embed = {
+  --     provider = 'github-copilot', -- assuming same provider handles embedding
+  --     model = 'copilot-embedding-v1', -- hypothetical name; tweak if needed
+  --     endpoint = nil,
+  --     api_key = nil,
+  --     extra = nil,
+  --   },
+  --   docker_extra_args = '',
+  -- },
+  --
+  behaviour = {
+    enable_curose_planning_mode = true,
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = 'make',
