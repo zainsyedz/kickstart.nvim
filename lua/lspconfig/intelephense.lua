@@ -21,6 +21,7 @@ return {
         'filter',
         'ftp',
         'fpm',
+        'frankenphp',
         'gd',
         'gettext',
         'gmp',
