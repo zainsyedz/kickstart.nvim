@@ -189,6 +189,7 @@ return {
       -- intelephense = require 'lspconfig.intelephense',
       helm_ls = require 'lspconfig.helm',
       dockerls = require 'lspconfig.dockerls',
+      pyright = require 'lspconfig.pyright'
     }
 
     -- Ensure the servers and tools above are installed
