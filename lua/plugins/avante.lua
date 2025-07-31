@@ -9,7 +9,7 @@ return {
     auto_suggestions_provider = 'copilot',
     providers = {
       copilot = {
-        model = 'claude-sonnet-4',
+        model = 'gpt-4.1',
       },
     },
   },
