@@ -216,7 +216,15 @@ return {
   },
 
   -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  {
+    'folke/todo-comments.nvim',
+    event = 'VimEnter',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('todo-comments').setup { signs = true }
+      vim.keymap.set('n', '<leader>st', ':TodoTelescope<CR>', { desc = 'Search TODOs' })
+    end,
+  },
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
