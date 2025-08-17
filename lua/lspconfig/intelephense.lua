@@ -51,6 +51,7 @@ return {
         'Phar',
         'posix',
         'pspell',
+        'random',
         'readline',
         'recode',
         'Reflection',
